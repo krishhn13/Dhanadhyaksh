@@ -1,6 +1,6 @@
 function loco(){
     gsap.registerPlugin(ScrollTrigger);
-
+//codepen.io
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
 const locoScroll = new LocomotiveScroll({
