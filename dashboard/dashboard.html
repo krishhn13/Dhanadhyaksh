@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+<!--left side------------------------------------------>
+    <div class="container">
+        <!-- left section -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Dhanadhyaksh</h2>
+                </div>
+                <div class="close-button">
+                    <!-- <span class="material-symbols-outlined">
+                        close
+                    </span> -->
+                    <!-- commented the close button because it was doing absoutely nothing  -->
+                </div>
+            </div>
+<!-- side bar members-->
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        grid_view
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                    <h3>Home</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        chart_data
+                    </span>
+                    <h3>Stocks</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        calculate
+                    </span>
+                    <h3>Calculator</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+<!----------------------------------------------------------->
+        <!-- centre section -->
+<main>
+<h1>this is main</h1>
+<h1>this will contain the name of the user </h1>
+
+<div class="date">
+    <input type="date">
+</div>
+
+<div class="insights">
+    <!-- start middle -->
+     <div class="sales">
+        <!-- <span class="material-symbols-outlined">trending_up</span> -->
+        <div class="middle">
+            <div class="dashboard-content">
+             
+                <div class="balance-section">
+                    <h3>Balance</h3>
+                    <p>₹<span id="balance">0</span></p>
+                    
+                </div>
+                
+                <!-- Income and Expense Section -->
+                <div class="income-expense-section">
+                    <div class="income">
+                        <h3>Income</h3>
+                        <p>₹<span id="display_u_income"></span></p>
+                    </div>
+                    <div class="expense">
+                        <h3>Expense</h3>
+                        <p>₹<span id="u_expense">0</span></p>
+                    </div>
+                </div>
+        </div>
+     </div>
+<!-- inputs for the expenses -->
+<div class="collect_expense">
+    <input type="number" id="expense_entered" placeholder="  Enter Amount for expense " style="width: 300px; margin-left: 20px; border: 5px solid #7d7979; height: 50px; border-radius: 25px;margin-top:25px;">
+    <button type="submit" onclick="kharcha()" id="update_button" style="border: 1px solid gray; border-radius: 50px;height: 50px; width: 50px;margin-top: 10px;"><span class="material-symbols-outlined">
+        arrow_upload_ready
+        </span></button>
+    
+</div>
+<!---------------------------------------------------------------------------------------------->
+</div>
+</main>
+<!----------------------------------------------------------->
+<!--right section -->
+        
+        <div class="right">
+            <div class="top">
+                <div class="menu-bar-theme"><button id="menu_bar">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div></div>
+                
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p id="user"><b>Aadi</b></p>
+                    <p>Admin</p>
+                    <small class="text-muted"></small>
+                </div>
+                <div class="profile-photo">
+                    <img src="instagram.png" alt="">
+                </div>
+            </div>
+            <div class="recent-updates">
+                <h2>NEWS</h2>
+            </div>
+            <div class="card" style="width: 18rem;" id="blog-container">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;" id="blog-container">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;" id="blog-container">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;" id="blog-container">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div><div class="card" style="width: 18rem;" id="blog-container">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+    const apiKey='2f4daaec72e9449383dc21f0f39d69f8'
+    const blogcontainer = document.getElementById('blog-container');
+    async function fetchrandomnews(){
+        try{
+            const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apikey=${apiKey}`
+            const response = await fetch(apiUrl)
+            const data =await response.json()
+            console.log(data)
+            return data.articles;
+        } catch(error)
+        {   
+            console.log('error fetching random news',error)
+            return[]
+
+        }
+    }
+    function displayblogs(articles){
+        blogcontainer.innerHTML= ""
+        articles.forEach((article)=>{
+            const blogcard = document.createElement("div")
+            blogcard.classList.add("blog-card")
+            const img =document.createElement("img")
+            img.src=article.urlToImage
+            img.alt = article.title
+            const title = document.createElement("h2")
+            title.textContent=article.title
+            const description = document.createElement("p")
+            description.textContent=article.description
+
+            blogcard.appendChild(img)
+            blogcard.appendChild(title)
+            blogcard.appendChild(description)
+            blogcontainer.appendChild(blogcard)
+        })
+    }
+    (async ()=>{
+        try{
+           const articles =  await fetchrandomnews()
+            displayblogs(articles);
+        }catch(error){}
+        console.log('error fetching random news',error);
+    })();
+    </script>
+</body>
+</html>
