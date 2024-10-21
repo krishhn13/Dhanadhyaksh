@@ -481,3 +481,9 @@ gsap.to("#page6>h1>span",{
   stagger:.2,
   color:`#fff`
 })
+
+
+document.getElementById("book").addEventListener("click",function(){
+  cursorEffect
+  alert("hey");
+});
