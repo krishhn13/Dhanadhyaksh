@@ -88,6 +88,7 @@ input[type="radio"] {
 #signup:checked ~ label.signup {
   color: #fff;
   cursor: default;
+  -webkit-user-select: none;
   user-select: none;
 }
 #signup:checked ~ label.login {
@@ -98,6 +99,7 @@ input[type="radio"] {
 }
 #login:checked ~ label.login {
   cursor: default;
+  -webkit-user-select:none;
   user-select: none;
 }
 .wrapper .form-container {
@@ -140,11 +142,12 @@ form .field input:focus::placeholder {
   color: #1a75ff;
 }
 .form-inner form .pass-link {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .form-inner form .signup-link {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
+  font-size:19px;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
