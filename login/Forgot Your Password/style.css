@@ -72,7 +72,7 @@ html, body {
 .slide-controls .slider-tab {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 100%;
   left: 0;
   z-index: 0;
   border-radius: 15px;
@@ -142,12 +142,11 @@ form .field input:focus::placeholder {
   color: #1a75ff;
 }
 .form-inner form .pass-link {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .form-inner form .signup-link {
   text-align: center;
-  margin-top: 40px;
-  font-size:19px;
+  margin-top: 30px;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
@@ -196,4 +195,31 @@ form .btn input[type="submit"] {
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.form-inner form .field2 {
+  width: 100%;
+  margin-top: 2px;
+}
+.form-inner form .field2 input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field2 input:focus {
+  border-color: #1a75ff;
+  /*box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field2 input::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field2 input:focus::placeholder {
+  color: #1a75ff;
 }
