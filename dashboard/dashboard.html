@@ -34,7 +34,7 @@
                     <h3>Dashboard</h3>
                 </a>
 
-                <a href="#">
+                <a href="/FEE-II Landing page/index.html">
                     <span class="material-symbols-outlined">
                         home
                     </span>
@@ -55,7 +55,7 @@
                     <h3>Calculator</h3>
                 </a>
 
-                <a href="#">
+                <a href="/login/index.html">
                     <span class="material-symbols-outlined">
                         logout
                     </span>
@@ -66,7 +66,7 @@
 <!----------------------------------------------------------->
         <!-- centre section -->
 <main>
-<h1>this is main</h1>
+<h1 >this is main</h1>
 <h1>this will contain the name of the user </h1>
 
 <div class="date">
@@ -113,70 +113,44 @@
 <!----------------------------------------------------------->
 <!--right section -->
         
-        <div class="right">
-            <div class="top">
-                <div class="menu-bar-theme"><button id="menu_bar">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-symbols-outlined">light_mode</span>
-                    <span class="material-symbols-outlined">dark_mode</span>
-                </div></div>
-                
+<div class="right">
+    <div class="top">
+        <div class="menu-bar-theme">
+            <button id="menu_bar">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="theme-toggler">
+                <span class="material-symbols-outlined" onclick="light_mode_function">light_mode</span>
+                <span class="material-symbols-outlined"onclick="dar_mode_function">dark_mode</span>
             </div>
-            <div class="profile">
-                <div class="info">
-                    <p id="user"><b>Aadi</b></p>
-                    <p>Admin</p>
-                    <small class="text-muted"></small>
-                </div>
-                <div class="profile-photo">
-                    <img src="instagram.png" alt="">
-                </div>
-            </div>
-            <div class="recent-updates">
-                <h2>NEWS</h2>
-            </div>
-            <div class="card" style="width: 18rem;" id="blog-container">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;" id="blog-container">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;" id="blog-container">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;" id="blog-container">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div><div class="card" style="width: 18rem;" id="blog-container">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
         </div>
+    </div>
+    
+    <div class="profile">
+        <div class="info">
+            <p id="user"><b>#045ef</b></p>
+            <p>user-id</p>
+            <small class="text-muted"></small>
+        </div>
+        <div class="profile-photo">
+            <img src="WhatsApp Image 2024-06-25 at 3.27.32 PM.jpeg" alt="">
+        </div>
+    </div>
+
+    <div class="recent-updates">
+        <h2>NEWS</h2>
+    </div>
+    
+    <div class="card" style="width: 100%;" id="blog-container">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
         
     </div>
 
@@ -186,7 +160,7 @@
     const blogcontainer = document.getElementById('blog-container');
     async function fetchrandomnews(){
         try{
-            const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apikey=${apiKey}`
+            const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=1&apikey=${apiKey}`
             const response = await fetch(apiUrl)
             const data =await response.json()
             console.log(data)

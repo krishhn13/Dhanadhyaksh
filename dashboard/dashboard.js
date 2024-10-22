@@ -1,5 +1,5 @@
 // fetching the income from the user 
-let user_income= prompt("Please enter your current income to continue :");
+// let user_income= prompt("Please enter your current income to continue :");
 document.getElementById('display_u_income').textContent=user_income;
 // managing the updation of expenses 
 
@@ -15,6 +15,20 @@ function kharcha() {
     u_balance = user_income - totalExpenses ;
     document.getElementById('balance').textContent= u_balance ; 
 }
+const themeToggler = document.getElementById('theme-toggler');
+const currentTheme = localStorage.getItem('theme');
 
-// calling an api for the news side pannel..
+// Apply the saved theme on page load
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
 
+// Toggle theme and save preference
+themeToggler.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});

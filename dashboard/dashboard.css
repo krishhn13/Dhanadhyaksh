@@ -34,6 +34,8 @@
     --clr-dark-variant: #677483;
     --box-shadow: 0 2rem 3rem var(--clr-light);
 }
+/* responsiveness comes from here */
+
 
 * {
     padding: 0;
@@ -68,11 +70,13 @@ a {
 }
 
 h1 {
+    color: #0258af;
     font-weight: 800;
     font-size: 1.8rem;
 }
 
 h2 {
+    color:#1974c7;
     font-size: 1.4rem;
 }
 
@@ -340,4 +344,73 @@ aside .sidebar a:hover{
         width: 90%; /* Make the cards take most of the screen width on smaller screens */
         max-width: none;
     }
+}
+.profile {
+    display: flex;
+    flex-direction: row-reverse; /* Swaps the order of the elements */
+    align-items: center; /* Align the items vertically in the center */
+    gap: 10px; /* Adds space between the profile photo and the info */
+}
+
+.profile-photo img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.info {
+    text-align: right; /* Align the text to the right if needed */
+}
+
+#user {
+    font-size: 1rem;
+    /* color: #045ef; Change the color as needed */
+}
+/* dark mode functionality */
+/* Light Mode (default) */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+aside.light-mode, .sidebar a.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+aside.dark-mode, .sidebar a.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+button, input, .balance-section, .income-expense-section {
+    transition: background-color 0.3s, color 0.3s;
+}
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #181818;
+    color: #fff;
+}
+
+/* Toggle button styling */
+.theme-toggler {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 20px;
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggler span {
+    font-size: 18px;
 }
