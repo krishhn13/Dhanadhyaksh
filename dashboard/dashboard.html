@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 
-<body>
+<body class = "light">
 <!--left side------------------------------------------>
     <div class="container">
         <!-- left section -->
@@ -120,13 +120,13 @@
                 <span class="material-symbols-outlined">menu</span>
             </button>
             <div class="theme-toggler">
-                <span class="material-symbols-outlined" onclick="light_mode_function">light_mode</span>
-                <span class="material-symbols-outlined"onclick="dar_mode_function">dark_mode</span>
+                <button id = "toggleTheme" onclick="dar_mode_function()" ondblclick='light_mode_fun()'>Dark Mode</button>
             </div>
         </div>
     </div>
     
-    <div class="profile">
+    <div class="profile">       
+
         <div class="info">
             <p id="user"><b>#045ef</b></p>
             <p>user-id</p>

@@ -368,49 +368,96 @@ aside .sidebar a:hover{
     /* color: #045ef; Change the color as needed */
 }
 /* dark mode functionality */
-/* Light Mode (default) */
-body.light-mode {
-    background-color: white;
-    color: black;
-}
-
-aside.light-mode, .sidebar a.light-mode {
-    background-color: #f0f0f0;
-    color: black;
-}
 
 /* Dark Mode */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
 
-aside.dark-mode, .sidebar a.dark-mode {
-    background-color: #333;
-    color: white;
-}
-
-button, input, .balance-section, .income-expense-section {
-    transition: background-color 0.3s, color 0.3s;
-}
-  /* Dark mode styles */
-  body.dark-mode {
+.dark{
     background-color: #181818;
-    color: #fff;
 }
 
-/* Toggle button styling */
-.theme-toggler {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #ccc;
-    border-radius: 20px;
-    width: 60px;
+.light{
+    background-color: white;
+}
+
+.theme-toggler > #toggleTheme {
+    font-size: 10px;
+    padding: 5px; /* Ensure padding is consistent here */
+    margin: 0;    /* Reset margin if it was accidentally set elsewhere */
+}
+
+
+aside .sidebar2 {
+    background-color: #181818;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top: 1rem;
 }
 
-.theme-toggler span {
-    font-size: 18px;
+aside h3 {
+    font-weight: 500;
 }
+
+aside .sidebar2 a {
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    align-items: center; /* corrected from centre */
+    height: 3.2rem; /* fixed spacing issue */
+    transition: all .1s ease-in;
+}
+aside .sidebar2 a span{
+    font-size: 1.6rem;
+    transition: all ease-in;
+}
+aside .sidebar2 a:last-child{
+    position: absolute ; 
+    bottom: 1rem;
+    width: 100%;
+}
+aside.sidebar2 a.active{
+    background: #181818;
+    color: var(--clr-primary);
+    margin-left: 0;
+    border-left: 5px solid var(--clr-primary);
+}
+aside .sidebar2 a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+aside .sidebar2 a:hover {
+   
+    color: var(--clr-primary);
+    margin-left: 0;
+}
+aside .sidebar2 a:hover{
+    margin-left: 1rem;
+    transition: .1s ease;
+}
+
+aside .top2 {
+    background-color: #181818;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* corrected from centre */
+    margin-top: 1.4rem;
+}
+
+aside .logo2 {
+    display: flex;
+    gap: 1rem;
+}
+
+aside .top2 .close {
+    display: none; /* corrected the selector */
+}
+button {
+    padding: 10px; /* Ensure this is the same for both modes */
+    margin: 0;     /* Reset margin */
+    transition: background-color 0.3s; /* Smooth transition for color */
+}
+
+
