@@ -23,7 +23,7 @@
         <div class="form-inner">
             <form action="#" class="login" onsubmit="event.preventDefault(); login();" autocomplete="off">
                 <div class="field">
-                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="text" id="#" placeholder="Enter your name" required>
                 </div>
                 <div class="field">
                     <input type="email" id="login-email" placeholder="Email Address" required>
@@ -38,10 +38,9 @@
                 </div>
                 <div class="signup-link">Not a member? <br><a href="#">Signup now</a></div>
             </form>
-
             <form action="#" class="signup" onsubmit="return validate(event)" autocomplete="off">
                 <div class="field">
-                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="text" id="signup-name" placeholder="Enter Your Name" required>
                 </div>
                 <div class="field">
                     <input type="email" id="signup-email" placeholder="Email Address" required>
@@ -53,7 +52,7 @@
                     <input type="password" id="signup-conf-pass" placeholder="Confirm password" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="security-question" id="security" title ="Security Question, which will be used if you forgot your password!" placeholder="What's your pet name? " required> 
+                    <input type="text" name="security-question" id="security" title="Security Question, which will be used if you forgot your password!" placeholder="What's your pet name?" required>
                 </div>
                 <div class="field btn">
                     <div class="btn-layer"></div>

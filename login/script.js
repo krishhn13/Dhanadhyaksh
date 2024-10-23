@@ -1,3 +1,4 @@
+
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
@@ -9,6 +10,7 @@ const signupID = document.getElementById("signup-email");
 const signupPass = document.getElementById("signup-pass");
 const signupPass2 = document.getElementById("signup-conf-pass");
 const security = document.getElementById("security");
+const signupName = document.getElementById("signup-name");
 
 signupBtn.onclick = () => {
     loginForm.style.marginLeft = "-50%";
@@ -36,6 +38,7 @@ function validate(event) {
         localStorage.setItem("email" + i, signupID.value);
         localStorage.setItem("password" + i, signupPass.value);
         localStorage.setItem("security"+i,security.value);
+        localStorage.setItem("name"+i,signupName.value);
         i++;
         localStorage.setItem('signupIndex', i);
         alert("Signup successful!");
