@@ -91,14 +91,54 @@ function dar_mode_function() {
     document.body.className = 'dark';
     document.getElementsByClassName('top')[0].className = 'top2';
     document.getElementsByClassName('sidebar')[0].className = 'sidebar2';
+    document.getElementsByClassName('date')[0].className = "dark-date";
+    document.getElementsByClassName('balance-section')[0].className = "dark-balance-section";
+    document.getElementsByClassName('income')[0].className = "dark-income";
+    document.getElementsByClassName('expense')[0].className = "dark-expense";
+    document.getElementsByClassName('profile')[0].className = "dark-profile";
+
     // Ensure button stays in place
     document.getElementById('toggleTheme').style.margin = '0';
+
 }
 
 function light_mode_fun() {
     document.body.className = 'light';
     document.getElementsByClassName('top2')[0].className = 'top';
     document.getElementsByClassName('sidebar2')[0].className = 'sidebar';
+    document.getElementsByClassName('balance-section')[0].className = "dark-balance-section";
+    
     // Ensure button stays in place
     document.getElementById('toggleTheme').style.margin = '0';
+    document.getElementsByClassName('dark-date')[0].className = "date";
+}
+
+
+months=['January','February','March','April','May','June','July','August','September','October','November','December']
+var date = new Date();
+var day = date.getDate();
+var mon = months[date.getMonth()]
+document.getElementsByClassName('date')[0].style.padding ="20px";
+document.getElementsByClassName('date')[0].innerHTML=mon+" "+day+" , "+date.getFullYear();
+document.getElementById('greetings').style.padding = "20px";
+var time = date.getHours();
+if(time<12){
+    document.getElementById('greetings').innerHTML ="Good Morning !!"; 
+}
+else if(time<17){
+    document.getElementById('greetings').innerHTML ="Good Afternoon !!"; 
+}
+else{
+    document.getElementById('greetings').innerHTML ="Good Evening !!"; 
+}
+
+
+document.getElementById('UserName').style.padding  ="20px";
+var signupIndex = parseInt(localStorage.getItem('signupIndex')) || 0;
+
+if(signupIndex>0){
+    document.getElementById("UserName").innerHTML = "Dear " + localStorage.getItem('name'+signupIndex-1)+ " ,";
+}
+else{
+    document.getElementById("UserName").innerHTML = "Dear " + localStorage.getItem('name'+signupIndex)+" ,";
 }
