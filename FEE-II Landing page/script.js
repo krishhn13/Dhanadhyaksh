@@ -484,6 +484,5 @@ gsap.to("#page6>h1>span",{
 
 
 document.getElementById("book").addEventListener("click",function(){
-  cursorEffect
-  alert("hey");
+  window.location.href="../login/index.html";
 });

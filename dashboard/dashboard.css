@@ -52,6 +52,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: 0.88rem; /* fixed spacing issue */
+    -webkit-user-select: none; /* For Safari */
     user-select: none;
     overflow-x: hidden;
     background: var(--clr-color-background);
@@ -346,6 +347,7 @@ aside .sidebar a:hover{
     }
 }
 .profile {
+    padding:10px;
     display: flex;
     flex-direction: row-reverse; /* Swaps the order of the elements */
     align-items: center; /* Align the items vertically in the center */
@@ -380,6 +382,8 @@ aside .sidebar a:hover{
 }
 
 .theme-toggler > #toggleTheme {
+    padding-top:-1em;
+    border-radius:10px;
     font-size: 10px;
     padding: 5px; /* Ensure padding is consistent here */
     margin: 0;    /* Reset margin if it was accidentally set elsewhere */
@@ -507,12 +511,118 @@ button {
   }
 
   .dark-profile{
-   
+    display: flex;
+    flex-direction: row-reverse; /* Swaps the order of the elements */
+    align-items: center; /* Align the items vertically in the center */
+    gap: 10px; /* Adds space between the profile photo and the info */
+    background-color: rgba(255, 255, 255, 0.931);
+    padding:10px;
+    border-radius:6px;
   }
 
+  .modal {
+    border-radius:10px;
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
 
-  @media screen and (max-width:768px) {
-    aside{
-        width:9px;
-    }
-  }
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--clr-primary-variant);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #d4dfea;
+}
+
+.calculator input {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.dark-button{
+    padding:10px;
+    background-color: #202528;
+    color: #9fabb8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    /* border: 1px solid #9fabb8; */
+    background-color: #ecf8ff;
+}
+
+#toggleTheme>img{
+    width: 20px;
+    height: 20px;
+}
+
+.dark-modal-content {
+    background-color: #000000;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.dark-calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.dark-calculator input {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 20px;
+    color:#ecf8ff;
+}
+
+
+.dark-calculator button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #021221;
+    color: #9fabb8;
+}

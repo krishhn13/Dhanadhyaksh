@@ -7,9 +7,37 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="./images/dashboard.png">
 </head>
 
 <body class = "light">
+    <!--Calculator  -->
+    <div id="calculatorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="calcDisplay" disabled title = "calc">
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="setOperation('+')">+</button>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="setOperation('-')">-</button>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="setOperation('*')">*</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="setOperation('/')">/</button>
+            </div>
+        </div>
+    </div>
+
 <!--left side------------------------------------------>
     <div class="container">
         <!-- left section -->
@@ -41,14 +69,14 @@
                     <h3>Home</h3>
                 </a>
 
-                <a href="#">
+                <a href="https://www.google.com/finance/">
                     <span class="material-symbols-outlined">
                         chart_data
                     </span>
                     <h3>Stocks</h3>
                 </a>
 
-                <a href="#">
+                <a href="#" onclick = "openCalc()">
                     <span class="material-symbols-outlined">
                         calculate
                     </span>
@@ -70,7 +98,7 @@
 <h1 id = "UserName">this will contain the name of the user </h1>
 
 <div class="date">
-    <input type="date">
+    <input type="date" title="daily date">
 </div>
 
 <div class="insights">
@@ -116,11 +144,11 @@
 <div class="right">
     <div class="top">
         <div class="menu-bar-theme">
-            <button id="menu_bar">
-                <span class="material-symbols-outlined">menu</span>
+            <button id="menu_bar" title ="none">
+                <!-- <span class="material-symbols-outlined">menu</span> -->
             </button>
             <div class="theme-toggler">
-                <button id = "toggleTheme" onclick="dar_mode_function()" ondblclick='light_mode_fun()'>Dark Mode</button>
+                <button id = "toggleTheme" onclick="dar_mode_function()" ondblclick='light_mode_fun()'><img src="https://img.icons8.com/?size=50&id=45475&format=png" alt="Dark Mode"></button>
             </div>
         </div>
     </div>
@@ -133,7 +161,7 @@
             <small class="text-muted"></small>
         </div>
         <div class="profile-photo">
-            <img src="WhatsApp Image 2024-06-25 at 3.27.32 PM.jpeg" alt="">
+            <img src="./images/WhatsApp Image 2024-06-25 at 3.27.32 PM.jpeg" alt="">
         </div>
     </div>
 
