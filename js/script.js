@@ -43,9 +43,9 @@ page1.addEventListener("mousemove",function(dets){
 
 page1.addEventListener("mouseenter",function(){
   gsap.to(cursor,{
-    scale:0.4,
+    scale:0.8,
     opacity:1,
-    zIndex:2
+    zIndex:1
   })
 })
 
