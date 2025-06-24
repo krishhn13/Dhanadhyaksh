@@ -43,7 +43,7 @@ page1.addEventListener("mousemove",function(dets){
 
 page1.addEventListener("mouseenter",function(){
   gsap.to(cursor,{
-    scale:1,
+    scale:0.4,
     opacity:1  
   })
 })
@@ -301,11 +301,6 @@ gsap.to("#page4>h1>span",{
   stagger:.2,
   color:`#fff`
 })
-
-
-
-
-
 
 
 function canvas1(){
