@@ -483,3 +483,8 @@ document.getElementById("book").addEventListener("click",function(){
   window.location.href="./login.html";
   // alert("This is a demo website, so the book is not clickable.");
 });
+
+document.getElementById("page13").addEventListener("click",function(){
+  document.getElementById("page13").style.cursor = "pointer";
+  window.location.href="./login.html";
+});
