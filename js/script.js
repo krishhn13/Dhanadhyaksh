@@ -481,7 +481,6 @@ gsap.to("#page6>h1>span",{
 
 document.getElementById("book").addEventListener("click",function(){
   window.location.href="./login.html";
-  // alert("This is a demo website, so the book is not clickable.");
 });
 
 document.getElementById("page13").style.cursor = "pointer";
