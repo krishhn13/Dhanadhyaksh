@@ -281,11 +281,8 @@ ScrollTrigger.create({
   end: `250% top`,
 });
 }
+
 canvas()
-
-
-
-
 
 
 var clutter = "";
@@ -311,16 +308,16 @@ gsap.to("#page4>h1>span",{
 
 function canvas1(){
   const canvas = document.querySelector("#page5>canvas");
-const context = canvas.getContext("2d");
+  const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
 
-window.addEventListener("resize", function () {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-render();
+  window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  render();
 });
 
 function files(index) {
