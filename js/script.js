@@ -105,6 +105,7 @@ tl.to("#loader h3",{
 tl.to("#loader",{
   opacity:0,
 })
+
 tl.to("#loader",{
   display:"none",
 })
