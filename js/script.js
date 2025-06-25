@@ -87,12 +87,14 @@ page8.addEventListener("mouseleave",function(){
 cursorEffect2()
 
 var tl = gsap.timeline()
+
 tl.from("#loader h3",{
   x:40,
   opacity:0,
   duration:1,
   stagger:0.1
 })
+
 tl.to("#loader h3",{
   opacity:0,
   x:-10,
