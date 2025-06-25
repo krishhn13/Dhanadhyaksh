@@ -101,6 +101,7 @@ tl.to("#loader h3",{
   duration:1,
   stagger:0.1
 })
+
 tl.to("#loader",{
   opacity:0,
 })
