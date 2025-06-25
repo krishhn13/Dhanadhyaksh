@@ -56,17 +56,18 @@ page1.addEventListener("mouseleave",function(){
   })
 })
 }
+
 cursorEffect()
 
 function cursorEffect2(){
-var page8 = document.querySelector("#page8")
-var cursor2 = document.querySelector("#cursor2")
+  var page8 = document.querySelector("#page8")
+  var cursor2 = document.querySelector("#cursor2")
 
-page8.addEventListener("mousemove",function(dets){
-  gsap.to(cursor2,{
-    x:dets.x,
-    y:dets.y
-  })
+  page8.addEventListener("mousemove",function(dets){
+    gsap.to(cursor2,{
+      x:dets.x,
+      y:dets.y
+    })
 })
 
 page8.addEventListener("mouseenter",function(){
