@@ -32,12 +32,12 @@ loco()
 
 function cursorEffect(){
   var page1 = document.querySelector("#page1")
-var cursor = document.querySelector("#cursor")
+  var cursor = document.querySelector("#cursor")
 
-page1.addEventListener("mousemove",function(dets){
-  gsap.to(cursor,{
-    x:dets.x,
-    y:dets.y
+  page1.addEventListener("mousemove",function(dets){
+    gsap.to(cursor,{
+      x:dets.x,
+      y:dets.y
   })
 })
 
