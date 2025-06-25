@@ -141,10 +141,10 @@ function canvas(){
     canvas.height = window.innerHeight;
 
 
-window.addEventListener("resize", function () {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  render();
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      render();
 });
 
 function files(index) {
