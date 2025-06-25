@@ -421,7 +421,7 @@ onUpdate: render,
 images[1].onload = render;
 
 function render() {
-scaleImage(images[imageSeq.frame], context);
+  scaleImage(images[imageSeq.frame], context);
 }
 
 function scaleImage(img, ctx) {
