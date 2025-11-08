@@ -60,7 +60,7 @@ function login() {
         var storedPassword = localStorage.getItem("password" + j);
 
         if (loginID === storedEmail && loginPass === storedPassword) {
-            window.location.href = "../dashboard/dashboard.html";
+            window.location.href = "../dashboard.html";
             return; // Exit the function once login is successful
         }
         j++;
