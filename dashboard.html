@@ -1368,13 +1368,12 @@
             previousInput = currentInput;
             currentInput = '';
         }
-
         function calculateResult() {
             let computation;
             const prev = parseFloat(previousInput);
             const current = parseFloat(currentInput);
             if (isNaN(prev) || isNaN(current)) return;
-            
+        
             switch (operation) {
                 case '+':
                     computation = prev + current;
