@@ -42,8 +42,6 @@ function validate(event) {
         return true;
     }
 }
-
-//Login Function || Checking if the user exists or not 
 function login() {
     var j = 0;
     var loginID = document.getElementById("login-email").value;
