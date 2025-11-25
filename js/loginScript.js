@@ -43,7 +43,6 @@ function validate(event) {
     }
 }
 
-
 //Login Function || Checking if the user exists or not 
 function login() {
     var j = 0;
