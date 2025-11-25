@@ -42,6 +42,7 @@ function validate(event) {
         return true;
     }
 }
+
 function login() {
     var j = 0;
     var loginID = document.getElementById("login-email").value;
