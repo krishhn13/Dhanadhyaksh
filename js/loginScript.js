@@ -56,7 +56,7 @@ function login() {
 
         if (loginID === storedEmail && loginPass === storedPassword) {
             window.location.href = "../dashboard.html";
-            return; // Exit the function once login is successful
+            return;
         }
         j++;
     }
