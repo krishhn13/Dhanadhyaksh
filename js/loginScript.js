@@ -27,7 +27,6 @@ signupLink.onclick = () => {
     return false;
 };
 
-//Lets Sign Up because user is new
 let i = localStorage.getItem('signupIndex') ? parseInt(localStorage.getItem('signupIndex')) : 0;
 function validate(event) {
     event.preventDefault();
