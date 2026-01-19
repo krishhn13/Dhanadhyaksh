@@ -513,9 +513,9 @@
     font-size: 14px;
     padding: 1vw 3vw;
 }
-.footer-bottom p{
+.footer-bottom p, a{
     color: #fff;
-    font-size: .75vw;
+    font-size: 1vw;
 }
 
 /* Responsive styles */
