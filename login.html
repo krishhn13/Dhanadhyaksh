@@ -35,8 +35,10 @@
             align-items: center;
             padding: 20px;
             overflow-x: hidden;
+            transition: var(--transition);
         }
 
+        /* Authentication Page Styles */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -265,6 +267,17 @@
             transform: translateY(0);
         }
 
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: var(--dark-gray);
+            margin-top: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-3px);
+        }
+
         .form-footer {
             text-align: center;
             margin-top: 25px;
@@ -300,6 +313,205 @@
             text-decoration: underline;
         }
 
+        /* Dashboard Styles */
+        .dashboard-container {
+            display: none;
+            width: 100%;
+            max-width: 1200px;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            min-height: 600px;
+            flex-direction: column;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .user-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .user-details p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .logout-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .logout-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .dashboard-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .welcome-card {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .welcome-card h2 {
+            color: var(--dark-blue);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-card p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+        }
+
+        .stat-info h3 {
+            font-size: 2rem;
+            color: var(--dark-blue);
+            margin-bottom: 5px;
+        }
+
+        .stat-info p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .recent-activity {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-top: 10px;
+        }
+
+        .recent-activity h3 {
+            color: var(--dark-blue);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .activity-list {
+            list-style-type: none;
+        }
+
+        .activity-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .activity-list li:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+        }
+
+        .activity-details p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .activity-details .time {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            opacity: 0.7;
+        }
+
+        /* Toast Styles */
         .toast {
             position: fixed;
             top: 20px;
@@ -373,8 +585,61 @@
             width: 100%;
         }
 
+        /* Redirection Overlay */
+        .redirect-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(33, 150, 243, 0.95);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            color: white;
+            text-align: center;
+        }
+
+        .redirect-content {
+            max-width: 500px;
+            padding: 40px;
+        }
+
+        .redirect-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .redirect-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .redirect-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .redirect-loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
         @media (max-width: 768px) {
-            .auth-container {
+            .auth-container, .dashboard-container {
                 flex-direction: column;
                 max-width: 500px;
             }
@@ -398,6 +663,21 @@
             .header h1 {
                 font-size: 2.2rem;
             }
+
+            .dashboard-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .user-info {
+                flex-direction: column;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -416,13 +696,22 @@
             .welcome-content h2 {
                 font-size: 1.5rem;
             }
+
+            .dashboard-content {
+                padding: 20px;
+            }
+
+            .welcome-card h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Authentication Page -->
+    <div class="container" id="auth-page">
         <div class="header">
-            <h1>Dhanadhyaksh
+            <h1>Dhanadhyaksh</h1>
             <p>Secure authentication with advanced validation</p>
         </div>
 
@@ -433,7 +722,7 @@
                 </div>
                 <div class="welcome-content">
                     <h2>Welcome to Dhanadhyaksh</h2>
-                    <p>Innovative solutions for your financial needs</p>
+                    <p>Join our community and experience secure, seamless authentication with advanced validation and beautiful design.</p>
                 </div>
             </div>
 
@@ -483,7 +772,7 @@
                 <!-- Signup Form -->
                 <div class="form-container" id="signup-form" style="display: none;">
                     <h2 class="form-title">Create Account</h2>
-                    <p class="form-subtitle">Sign up to get started with AuthFlow</p>
+                    <p class="form-subtitle">Sign up to get started with Dhanadhyaksh</p>
                     
                     <form id="signupForm">
                         <div class="form-group">
@@ -543,11 +832,220 @@
                 </div>
             </div>
         </div>
-
-        <div class="toast" id="toast"></div>
     </div>
 
+    <!-- Dashboard Page -->
+    <div class="dashboard-container" id="dashboard-page">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="dashboard-username">User Name</h3>
+                    <p id="dashboard-email">user@example.com</p>
+                </div>
+                <button class="logout-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <h2>Welcome Back, <span id="welcome-name">User</span>!</h2>
+                <p>You have successfully logged into your Dhanadhyaksh account. Here's an overview of your account activity and statistics.</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>28</h3>
+                        <p>Days Active</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>100%</h3>
+                        <p>Account Security</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>15</h3>
+                        <p>Tasks Completed</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Notifications</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul class="activity-list">
+                    <li>
+                        <div class="activity-icon">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>Successfully logged in to your account</p>
+                            <span class="time">Just now</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>Profile information updated</p>
+                            <span class="time">2 days ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>Password changed successfully</p>
+                            <span class="time">1 week ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>Viewed monthly analytics report</p>
+                            <span class="time">2 weeks ago</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-footer">
+                <button class="btn btn-secondary" id="back-to-auth">
+                    <i class="fas fa-arrow-left"></i> Back to Authentication
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Redirection Overlay -->
+    <div class="redirect-overlay" id="redirect-overlay">
+        <div class="redirect-content">
+            <div class="redirect-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 id="redirect-title">Redirecting</h2>
+            <p id="redirect-message">Please wait while we redirect you to your dashboard...</p>
+            <div class="redirect-loader"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
     <script>
+        // Session Management
+        const sessionManager = {
+            currentUser: null,
+            
+            init: function() {
+                // Check if user is already logged in (from localStorage)
+                const savedUser = localStorage.getItem('Dhanadhyaksh_user');
+                if (savedUser) {
+                    this.currentUser = JSON.parse(savedUser);
+                    this.showDashboard();
+                } else {
+                    this.showAuth();
+                }
+            },
+            
+            login: function(user) {
+                this.currentUser = user;
+                localStorage.setItem('Dhanadhyaksh_user', JSON.stringify(user));
+                this.showRedirect('Login Successful', 'Welcome back! Redirecting to your dashboard...');
+                
+                setTimeout(() => {
+                    this.showDashboard();
+                }, 2000);
+            },
+            
+            signup: function(user) {
+                this.currentUser = user;
+                localStorage.setItem('Dhanadhyaksh_user', JSON.stringify(user));
+                this.showRedirect('Account Created', 'Welcome to Dhanadhyaksh! Redirecting to your dashboard...');
+                
+                setTimeout(() => {
+                    this.showDashboard();
+                }, 2000);
+            },
+            
+            logout: function() {
+                this.currentUser = null;
+                localStorage.removeItem('Dhanadhyaksh_user');
+                this.showRedirect('Logout Successful', 'You have been logged out. Redirecting to login page...');
+                
+                setTimeout(() => {
+                    this.showAuth();
+                }, 2000);
+            },
+            
+            showAuth: function() {
+                document.getElementById('auth-page').style.display = 'flex';
+                document.getElementById('dashboard-page').style.display = 'none';
+                document.getElementById('redirect-overlay').style.display = 'none';
+                
+                // Reset forms
+                loginForm.reset();
+                signupForm.reset();
+                strengthBar.style.width = '0';
+                
+                // Pre-fill demo credentials
+                document.getElementById('login-email').value = 'demo@example.com';
+                document.getElementById('login-password').value = 'Demo@123';
+            },
+            
+            showDashboard: function() {
+                document.getElementById('auth-page').style.display = 'none';
+                document.getElementById('dashboard-page').style.display = 'flex';
+                document.getElementById('redirect-overlay').style.display = 'none';
+                
+                // Update dashboard with user info
+                if (this.currentUser) {
+                    document.getElementById('dashboard-username').textContent = this.currentUser.name;
+                    document.getElementById('dashboard-email').textContent = this.currentUser.email;
+                    document.getElementById('welcome-name').textContent = this.currentUser.name.split(' ')[0];
+                }
+            },
+            
+            showRedirect: function(title, message) {
+                document.getElementById('redirect-title').textContent = title;
+                document.getElementById('redirect-message').textContent = message;
+                document.getElementById('redirect-overlay').style.display = 'flex';
+            }
+        };
+
         // DOM Elements
         const loginFormEl = document.getElementById('login-form');
         const signupFormEl = document.getElementById('signup-form');
@@ -556,6 +1054,8 @@
         const showSignupBtn = document.getElementById('show-signup');
         const showLoginBtn = document.getElementById('show-login');
         const toast = document.getElementById('toast');
+        const logoutBtn = document.getElementById('logout-btn');
+        const backToAuthBtn = document.getElementById('back-to-auth');
         
         // Toggle password visibility
         document.querySelectorAll('.toggle-password').forEach(button => {
@@ -707,14 +1207,8 @@
             const user = users.find(u => u.email === email && u.password === password);
             
             if (user) {
-                showToast('Login successful! Redirecting...', 'success');
-                // In a real app, you would redirect or set authentication token
-                setTimeout(() => {
-                    // Reset form
-                    loginForm.reset();
-                    // Show welcome message
-                    showToast(`Welcome back, ${user.name}!`, 'success');
-                }, 1000);
+                // Successful login - redirect to dashboard
+                sessionManager.login(user);
             } else {
                 showToast('Invalid email or password', 'error');
                 passwordError.textContent = 'Invalid email or password';
@@ -794,19 +1288,15 @@
                 emailError.style.display = 'block';
             } else {
                 // Add new user (in a real app, this would be a database operation)
-                users.push({ email, password, name });
+                const newUser = { email, password, name };
+                users.push(newUser);
                 
-                showToast('Account created successfully!', 'success');
+                // Successful signup - redirect to dashboard
+                sessionManager.signup(newUser);
                 
                 // Reset form
                 signupForm.reset();
                 strengthBar.style.width = '0';
-                
-                // Switch to login form after successful signup
-                setTimeout(() => {
-                    showLoginBtn.click();
-                    showToast('Please login with your new account', 'info');
-                }, 1500);
             }
             
             // Hide loading
@@ -827,16 +1317,30 @@
             }
         });
 
-        // Initialize with some demo data for easier testing
-        window.addEventListener('DOMContentLoaded', () => {
+        // Logout functionality
+        logoutBtn.addEventListener('click', function() {
+            sessionManager.logout();
+        });
+
+        // Back to auth page from dashboard
+        backToAuthBtn.addEventListener('click', function() {
+            sessionManager.logout();
+        });
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            sessionManager.init();
+            
             // Pre-fill demo credentials for testing
             document.getElementById('login-email').value = 'demo@example.com';
             document.getElementById('login-password').value = 'Demo@123';
             
-            // Show welcome message
-            setTimeout(() => {
-                showToast('Welcome to Dhanadhyaksh! Use demo@example.com / Demo@123 to test login', 'info');
-            }, 1000);
+            // Show welcome message on first load if not logged in
+            if (!localStorage.getItem('Dhanadhyaksh_user')) {
+                setTimeout(() => {
+                    showToast('Welcome to Dhanadhyaksh! Use demo@example.com / Demo@123 to test login', 'info');
+                }, 1000);
+            }
         });
     </script>
 </body>
