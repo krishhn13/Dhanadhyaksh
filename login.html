@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanadhyaksh | Secure Login & Signup</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-blue: #2196f3;
@@ -142,8 +144,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         .form-section {
@@ -554,7 +563,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .password-strength {
@@ -615,8 +626,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .redirect-content h2 {
@@ -640,7 +658,9 @@
         }
 
         @media (max-width: 768px) {
-            .auth-container, .dashboard-container {
+
+            .auth-container,
+            .dashboard-container {
                 flex-direction: column;
                 max-width: 500px;
             }
@@ -686,7 +706,8 @@
                 font-size: 1.8rem;
             }
 
-            .welcome-section, .form-section {
+            .welcome-section,
+            .form-section {
                 padding: 25px;
             }
 
@@ -708,6 +729,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Authentication Page -->
     <div class="container" id="auth-page">
@@ -723,7 +745,8 @@
                 </div>
                 <div class="welcome-content">
                     <h2>Welcome to Dhanadhyaksh</h2>
-                    <p>Join our community and experience secure, seamless authentication with advanced validation and beautiful design.</p>
+                    <p>Join our community and experience secure, seamless authentication with advanced validation and
+                        beautiful design.</p>
                 </div>
             </div>
 
@@ -732,13 +755,14 @@
                 <div class="form-container" id="login-form">
                     <h2 class="form-title">Login</h2>
                     <p class="form-subtitle">Sign in to your account to continue</p>
-                    
+
                     <form id="loginForm">
                         <div class="form-group">
                             <label for="login-email">Email Address</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" id="login-email" class="form-control" placeholder="Enter your email" required>
+                                <input type="email" id="login-email" class="form-control" placeholder="Enter your email"
+                                    required>
                             </div>
                             <div class="error-message" id="login-email-error"></div>
                         </div>
@@ -747,7 +771,8 @@
                             <label for="login-password">Password</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                                <input type="password" id="login-password" class="form-control"
+                                    placeholder="Enter your password" required>
                                 <button type="button" class="toggle-password" id="toggle-login-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -774,13 +799,14 @@
                 <div class="form-container" id="signup-form" style="display: none;">
                     <h2 class="form-title">Create Account</h2>
                     <p class="form-subtitle">Sign up to get started with Dhanadhyaksh</p>
-                    
+
                     <form id="signupForm">
                         <div class="form-group">
                             <label for="signup-name">Full Name</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="signup-name" class="form-control" placeholder="Enter your full name" required>
+                                <input type="text" id="signup-name" class="form-control"
+                                    placeholder="Enter your full name" required>
                             </div>
                             <div class="error-message" id="signup-name-error"></div>
                         </div>
@@ -789,7 +815,8 @@
                             <label for="signup-email">Email Address</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" id="signup-email" class="form-control" placeholder="Enter your email" required>
+                                <input type="email" id="signup-email" class="form-control"
+                                    placeholder="Enter your email" required>
                             </div>
                             <div class="error-message" id="signup-email-error"></div>
                         </div>
@@ -798,7 +825,8 @@
                             <label for="signup-password">Password</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="signup-password" class="form-control" placeholder="Create a strong password" required>
+                                <input type="password" id="signup-password" class="form-control"
+                                    placeholder="Create a strong password" required>
                                 <button type="button" class="toggle-password" id="toggle-signup-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -813,7 +841,8 @@
                             <label for="confirm-password">Confirm Password</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                                <input type="password" id="confirm-password" class="form-control"
+                                    placeholder="Confirm your password" required>
                                 <button type="button" class="toggle-password" id="toggle-confirm-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -856,7 +885,8 @@
         <div class="dashboard-content">
             <div class="welcome-card">
                 <h2>Welcome Back, <span id="welcome-name">User</span>!</h2>
-                <p>You have successfully logged into your Dhanadhyaksh account. Here's an overview of your account activity and statistics.</p>
+                <p>You have successfully logged into your Dhanadhyaksh account. Here's an overview of your account
+                    activity and statistics.</p>
             </div>
 
             <div class="stats-container">
@@ -970,8 +1000,8 @@
         // Session Management
         const sessionManager = {
             currentUser: null,
-            
-            init: function() {
+
+            init: function () {
                 // Check if user is already logged in (from localStorage)
                 const savedUser = localStorage.getItem('Dhanadhyaksh_user');
                 if (savedUser) {
@@ -981,57 +1011,57 @@
                     this.showAuth();
                 }
             },
-            
-            login: function(user) {
+
+            login: function (user) {
                 this.currentUser = user;
                 localStorage.setItem('Dhanadhyaksh_user', JSON.stringify(user));
                 this.showRedirect('Login Successful', 'Welcome back! Redirecting to your dashboard...');
-                
+
                 setTimeout(() => {
                     this.showDashboard();
                 }, 2000);
             },
-            
-            signup: function(user) {
+
+            signup: function (user) {
                 this.currentUser = user;
                 localStorage.setItem('Dhanadhyaksh_user', JSON.stringify(user));
                 this.showRedirect('Account Created', 'Welcome to Dhanadhyaksh! Redirecting to your dashboard...');
-                
+
                 setTimeout(() => {
                     this.showDashboard();
                 }, 2000);
             },
-            
-            logout: function() {
+
+            logout: function () {
                 this.currentUser = null;
                 localStorage.removeItem('Dhanadhyaksh_user');
                 this.showRedirect('Logout Successful', 'You have been logged out. Redirecting to login page...');
-                
+
                 setTimeout(() => {
                     this.showAuth();
                 }, 2000);
             },
-            
-            showAuth: function() {
+
+            showAuth: function () {
                 document.getElementById('auth-page').style.display = 'flex';
                 document.getElementById('dashboard-page').style.display = 'none';
                 document.getElementById('redirect-overlay').style.display = 'none';
-                
+
                 // Reset forms
                 loginForm.reset();
                 signupForm.reset();
                 strengthBar.style.width = '0';
-                
+
                 // Pre-fill demo credentials
                 document.getElementById('login-email').value = 'demo@example.com';
                 document.getElementById('login-password').value = 'Demo@123';
             },
-            
-            showDashboard: function() {
+
+            showDashboard: function () {
                 document.getElementById('auth-page').style.display = 'none';
                 document.getElementById('dashboard-page').style.display = 'flex';
                 document.getElementById('redirect-overlay').style.display = 'none';
-                
+
                 // Update dashboard with user info
                 if (this.currentUser) {
                     document.getElementById('dashboard-username').textContent = this.currentUser.name;
@@ -1039,8 +1069,8 @@
                     document.getElementById('welcome-name').textContent = this.currentUser.name.split(' ')[0];
                 }
             },
-            
-            showRedirect: function(title, message) {
+
+            showRedirect: function (title, message) {
                 document.getElementById('redirect-title').textContent = title;
                 document.getElementById('redirect-message').textContent = message;
                 document.getElementById('redirect-overlay').style.display = 'flex';
@@ -1057,13 +1087,13 @@
         const toast = document.getElementById('toast');
         const logoutBtn = document.getElementById('logout-btn');
         const backToAuthBtn = document.getElementById('back-to-auth');
-        
+
         // Toggle password visibility
         document.querySelectorAll('.toggle-password').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const input = this.parentElement.querySelector('input');
                 const icon = this.querySelector('i');
-                
+
                 if (input.type === 'password') {
                     input.type = 'text';
                     icon.classList.remove('fa-eye');
@@ -1080,11 +1110,11 @@
         showSignupBtn.addEventListener('click', () => {
             loginFormEl.style.display = 'none';
             signupFormEl.style.display = 'block';
-            
+
             // Add animation effect
             signupFormEl.style.opacity = '0';
             signupFormEl.style.transform = 'translateX(20px)';
-            
+
             setTimeout(() => {
                 signupFormEl.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 signupFormEl.style.opacity = '1';
@@ -1095,11 +1125,11 @@
         showLoginBtn.addEventListener('click', () => {
             signupFormEl.style.display = 'none';
             loginFormEl.style.display = 'block';
-            
+
             // Add animation effect
             loginFormEl.style.opacity = '0';
             loginFormEl.style.transform = 'translateX(-20px)';
-            
+
             setTimeout(() => {
                 loginFormEl.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 loginFormEl.style.opacity = '1';
@@ -1110,17 +1140,17 @@
         // Password strength indicator
         const passwordInput = document.getElementById('signup-password');
         const strengthBar = document.getElementById('password-strength-bar');
-        
-        passwordInput.addEventListener('input', function() {
+
+        passwordInput.addEventListener('input', function () {
             const password = this.value;
             let strength = 0;
-            
+
             // Check password strength
             if (password.length >= 8) strength++;
             if (/[A-Z]/.test(password)) strength++;
             if (/[0-9]/.test(password)) strength++;
             if (/[^A-Za-z0-9]/.test(password)) strength++;
-            
+
             // Update strength bar
             strengthBar.className = 'strength-bar';
             if (password.length === 0) {
@@ -1138,7 +1168,7 @@
         function showToast(message, type = 'info') {
             toast.textContent = message;
             toast.className = `toast ${type} show`;
-            
+
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 4000);
@@ -1166,47 +1196,47 @@
         ];
 
         // Login form submission
-        loginForm.addEventListener('submit', async function(e) {
+        loginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             const email = document.getElementById('login-email').value.trim();
             const password = document.getElementById('login-password').value;
             const emailError = document.getElementById('login-email-error');
             const passwordError = document.getElementById('login-password-error');
             const loginBtn = document.getElementById('login-btn');
             const loginLoading = document.getElementById('login-loading');
-            
+
             // Reset errors
             emailError.style.display = 'none';
             passwordError.style.display = 'none';
-            
+
             // Client-side validation
             let isValid = true;
-            
+
             if (!validateEmail(email)) {
                 emailError.textContent = 'Please enter a valid email address';
                 emailError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (password.length < 6) {
                 passwordError.textContent = 'Password must be at least 6 characters';
                 passwordError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (!isValid) return;
-            
+
             // Show loading
             loginBtn.disabled = true;
             loginLoading.style.display = 'block';
-            
+
             // Simulate API call with delay
             await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
             // Check credentials (simulated backend validation)
             const user = users.find(u => u.email === email && u.password === password);
-            
+
             if (user) {
                 // Successful login - redirect to dashboard
                 sessionManager.login(user);
@@ -1215,74 +1245,74 @@
                 passwordError.textContent = 'Invalid email or password';
                 passwordError.style.display = 'block';
             }
-            
+
             // Hide loading
             loginBtn.disabled = false;
             loginLoading.style.display = 'none';
         });
 
         // Signup form submission
-        signupForm.addEventListener('submit', async function(e) {
+        signupForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('signup-name').value.trim();
             const email = document.getElementById('signup-email').value.trim();
             const password = document.getElementById('signup-password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
-            
+
             const nameError = document.getElementById('signup-name-error');
             const emailError = document.getElementById('signup-email-error');
             const passwordError = document.getElementById('signup-password-error');
             const confirmError = document.getElementById('confirm-password-error');
-            
+
             const signupBtn = document.getElementById('signup-btn');
             const signupLoading = document.getElementById('signup-loading');
-            
+
             // Reset errors
             nameError.style.display = 'none';
             emailError.style.display = 'none';
             passwordError.style.display = 'none';
             confirmError.style.display = 'none';
-            
+
             // Client-side validation
             let isValid = true;
-            
+
             if (!validateName(name)) {
                 nameError.textContent = 'Name must be at least 2 characters';
                 nameError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (!validateEmail(email)) {
                 emailError.textContent = 'Please enter a valid email address';
                 emailError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (!validatePassword(password)) {
                 passwordError.textContent = 'Password must be at least 8 characters with uppercase, lowercase, and a number';
                 passwordError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (password !== confirmPassword) {
                 confirmError.textContent = 'Passwords do not match';
                 confirmError.style.display = 'block';
                 isValid = false;
             }
-            
+
             if (!isValid) return;
-            
+
             // Show loading
             signupBtn.disabled = true;
             signupLoading.style.display = 'block';
-            
+
             // Simulate API call with delay
             await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
             // Check if user already exists (simulated backend validation)
             const existingUser = users.find(u => u.email === email);
-            
+
             if (existingUser) {
                 showToast('User with this email already exists', 'error');
                 emailError.textContent = 'User with this email already exists';
@@ -1291,25 +1321,25 @@
                 // Add new user (in a real app, this would be a database operation)
                 const newUser = { email, password, name };
                 users.push(newUser);
-                
+
                 // Successful signup - redirect to dashboard
                 sessionManager.signup(newUser);
-                
+
                 // Reset form
                 signupForm.reset();
                 strengthBar.style.width = '0';
             }
-            
+
             // Hide loading
             signupBtn.disabled = false;
             signupLoading.style.display = 'none';
         });
 
         // Forgot password functionality
-        document.getElementById('forgot-password').addEventListener('click', function(e) {
+        document.getElementById('forgot-password').addEventListener('click', function (e) {
             e.preventDefault();
             const email = prompt('Please enter your email address to reset your password:');
-            
+
             if (email && validateEmail(email)) {
                 // Simulate password reset request
                 showToast('Password reset instructions sent to your email', 'info');
@@ -1319,23 +1349,23 @@
         });
 
         // Logout functionality
-        logoutBtn.addEventListener('click', function() {
+        logoutBtn.addEventListener('click', function () {
             sessionManager.logout();
         });
 
         // Back to auth page from dashboard
-        backToAuthBtn.addEventListener('click', function() {
+        backToAuthBtn.addEventListener('click', function () {
             sessionManager.logout();
         });
 
         // Initialize the application
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             sessionManager.init();
-            
+
             // Pre-fill demo credentials for testing
             document.getElementById('login-email').value = 'demo@example.com';
             document.getElementById('login-password').value = 'Demo@123';
-            
+
             // Show welcome message on first load if not logged in
             if (!localStorage.getItem('Dhanadhyaksh_user')) {
                 setTimeout(() => {
@@ -1345,4 +1375,5 @@
         });
     </script>
 </body>
+
 </html>
